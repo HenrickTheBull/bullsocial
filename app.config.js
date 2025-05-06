@@ -20,7 +20,7 @@ module.exports = function (_config) {
   const IS_DEV = !IS_TESTFLIGHT || !IS_PRODUCTION
 
   const ASSOCIATED_DOMAINS = [
-    'applinks:deer.social',
+    'applinks:sky.thebull.app',
     // When testing local services, enter an ngrok (et al) domain here. It must use a standard HTTP/HTTPS port.
     ...(IS_DEV || IS_TESTFLIGHT ? [] : []),
   ]
@@ -37,9 +37,9 @@ module.exports = function (_config) {
   return {
     expo: {
       version: VERSION,
-      name: 'deer.social',
-      slug: 'deer',
-      scheme: ['bluesky', 'deer'],
+      name: 'Bullsky',
+      slug: 'bull',
+      scheme: ['bluesky', 'bull'],
       // owner: 'blueskysocial',
       // owner: 'neema.brown',
       runtimeVersion: {
@@ -50,7 +50,7 @@ module.exports = function (_config) {
       primaryColor: '#4b9b6c',
       ios: {
         supportsTablet: false,
-        bundleIdentifier: 'social.deer',
+        bundleIdentifier: 'sky.thebull.app',
         config: {
           usesNonExemptEncryption: false,
         },
@@ -64,7 +64,7 @@ module.exports = function (_config) {
             'Used to save images to your library.',
           NSPhotoLibraryUsageDescription:
             'Used for profile pictures, posts, and other kinds of content',
-          CFBundleSpokenName: 'deer.social',
+          CFBundleSpokenName: 'sky.thebull.app',
           CFBundleLocalizations: [
             'en',
             'an',
@@ -110,7 +110,7 @@ module.exports = function (_config) {
         entitlements: {
           'com.apple.developer.kernel.increased-memory-limit': true,
           'com.apple.developer.kernel.extended-virtual-addressing': true,
-          'com.apple.security.application-groups': 'group.social.deer',
+          'com.apple.security.application-groups': 'group.sky.thebull.app',
         },
         privacyManifests: {
           NSPrivacyAccessedAPITypes: [
@@ -154,7 +154,7 @@ module.exports = function (_config) {
           backgroundColor: '#4b9b6c',
         },
         googleServicesFile: './google-services.json',
-        package: 'social.deer',
+        package: 'sky.thebull.app',
         intentFilters: [
           {
             action: 'VIEW',
@@ -162,7 +162,7 @@ module.exports = function (_config) {
             data: [
               {
                 scheme: 'https',
-                host: 'deer.social',
+                host: 'sky.thebull.app',
               },
               IS_DEV && {
                 scheme: 'http',
@@ -359,10 +359,10 @@ module.exports = function (_config) {
           'react-native-vision-camera',
           {
             enableLocation: false,
-            cameraPermissionText: 'deer.social needs access to your camera.',
+            cameraPermissionText: 'BullSky needs access to your camera.',
             enableMicrophonePermission: true,
             microphonePermissionText:
-              'deer.social needs access to your microphone.',
+              'BullSky needs access to your microphone.',
           },
         ],
       ].filter(Boolean),

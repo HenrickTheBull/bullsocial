@@ -38,8 +38,8 @@ export const TermsOfServiceScreen = (_props: Props) => {
             <Trans>The Terms of Service have been moved to</Trans>{' '}
             <TextLink
               style={pal.link}
-              href="https://deer.social/about/tos"
-              text="deer.social/about/tos"
+              href="https://sky.thebull.app/about/tos"
+              text="sky.thebull.app/about/tos"
             />
           </Text>
         </View>
