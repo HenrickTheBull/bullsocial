@@ -40,7 +40,9 @@ export async function configureModerationForAccount(
 
 function switchToBskyAppLabeler() {
   BskyAgent.configure({
-    appLabelers: getNoAppLabelers() ? [] : [BSKY_LABELER_DID],
+    appLabelers: getNoAppLabelers()
+      ? []
+      : [BSKY_LABELER_DID, 'did:plc:t62n3f3nnewd5a5wtd73v3uj'],
   })
 }
 
