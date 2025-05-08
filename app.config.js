@@ -168,6 +168,10 @@ module.exports = function (_config) {
                 scheme: 'http',
                 host: 'localhost:19006',
               },
+              {
+                scheme: 'https',
+                host: 'bsky.app',
+              },
             ],
             category: ['BROWSABLE', 'DEFAULT'],
           },

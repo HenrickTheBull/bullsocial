@@ -9,6 +9,7 @@ import {logger} from '#/logger'
 
 export const BSKY_APP_HOST = 'https://sky.thebull.app'
 const BSKY_TRUSTED_HOSTS = [
+  'sky.thebull\\.app',
   'bsky\\.app',
   'bsky\\.social',
   'blueskyweb\\.xyz',
@@ -94,7 +95,8 @@ export function isBskyAppUrl(url: string): boolean {
   return (
     url.startsWith('https://bsky.app/') ||
     url.startsWith('https://deer.social/') ||
-    url.startsWith('https://sky.thebull.app/')
+    (url.startsWith('https://sky.thebull.app/') &&
+      !url.startsWith('https://sky.thebull.app/about'))
   )
 }
 
